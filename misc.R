@@ -72,7 +72,7 @@ est_rep <- function(rep, method = "kn", n = 200) {
     d <- data.frame(A,X1,X2)
     
     d$Y <- 2*A + X1 + X2 + rnorm(n)
-    Xmat <- cbind(X1, X2, X1^2, X2^2, X1*X1, X1^3, X2^3, X1^2*X2, X1*X2^2)
+    Xmat <- cbind(X1, X2, X1^2, X2^2, X1*X2, X1^3, X2^3, X1^2*X2, X1*X2^2)
     models_512 <- as.matrix(do.call(expand.grid, lapply(1:9, function(x) c(F,T))))
     dmat <- as.matrix(d)
     
